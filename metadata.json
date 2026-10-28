@@ -1,0 +1,6 @@
+{
+  "name": "Build a Multilayer Perceptron Neural Network for Classification",
+  "description": "A college machine learning micro-project demonstrating Multilayer Perceptron (MLP) neural network classification on the Pima Indians Diabetes dataset with data preprocessing, model training, evaluation metrics, and interactive prediction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
