@@ -14,6 +14,7 @@ export const Header: React.FC<HeaderProps> = ({
   onRetrain,
   isTraining,
   onNavigate,
+  currentPage,
   totalRecords
 }) => {
   const [downloadingZip, setDownloadingZip] = React.useState(false);
@@ -53,6 +54,19 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Action Controls */}
         <div className="flex items-center gap-2 flex-wrap">
+          <button
+            onClick={() => onNavigate('report')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg border transition ${
+              currentPage === 'report'
+                ? 'bg-cyan-500 text-black border-cyan-400 font-bold'
+                : 'bg-indigo-950/80 hover:bg-indigo-900 text-cyan-200 border-indigo-700/60 shadow-sm'
+            }`}
+            title="View & Download College Micro-Project Report in exact CMRIT / JNTUH format"
+          >
+            <span className="text-sm">📄</span>
+            College Report (.docx & PDF)
+          </button>
+
           <button
             onClick={() => onNavigate('viva')}
             className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"

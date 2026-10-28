@@ -8,6 +8,7 @@ import {
   BookOpen,
   GraduationCap,
   FileCode2,
+  FileText,
   Sliders,
   Play
 } from 'lucide-react';
@@ -39,6 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'theory', label: '6. About Multilayer Perceptrons', icon: BookOpen },
     { id: 'viva', label: '7. Viva Voce & Lab Guide', icon: GraduationCap },
     { id: 'python', label: '8. Python Code & Setup', icon: FileCode2 },
+    { id: 'report', label: '9. College Report Document', icon: FileText },
   ];
 
   return (

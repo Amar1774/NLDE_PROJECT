@@ -57,6 +57,12 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onNavigate, totalRec
             >
               Get Python / Windows 11 Package
             </button>
+            <button
+              onClick={() => onNavigate('report')}
+              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-indigo-600/30 transition"
+            >
+              📄 College Report (.docx & PDF)
+            </button>
           </div>
         </div>
       </div>

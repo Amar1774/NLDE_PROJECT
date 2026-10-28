@@ -14,6 +14,7 @@ import { PredictionPage } from './components/pages/PredictionPage.tsx';
 import { TheoryPage } from './components/pages/TheoryPage.tsx';
 import { VivaGuidePage } from './components/pages/VivaGuidePage.tsx';
 import { PythonFilesPage } from './components/pages/PythonFilesPage.tsx';
+import { CollegeReportPage } from './components/pages/CollegeReportPage.tsx';
 
 import { DEFAULT_PIMA_DATASET } from './data/pimaData.ts';
 import {
@@ -183,6 +184,10 @@ export default function App() {
 
           {currentPage === 'python' && (
             <PythonFilesPage />
+          )}
+
+          {currentPage === 'report' && (
+            <CollegeReportPage />
           )}
         </main>
       </div>

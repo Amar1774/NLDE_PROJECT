@@ -27,6 +27,16 @@ export async function downloadProjectZip() {
     root.file(filename, content);
   }
 
+  try {
+    const docxResp = await fetch('/college_micro_project_report.docx');
+    if (docxResp.ok) {
+      const docxBlob = await docxResp.blob();
+      root.file('Build_MLP_Neural_Network_Classification_Report.docx', docxBlob);
+    }
+  } catch (e) {
+    console.warn('Could not bundle docx into zip:', e);
+  }
+
   const content = await zip.generateAsync({ type: 'blob' });
   const url = URL.createObjectURL(content);
   const a = document.createElement('a');

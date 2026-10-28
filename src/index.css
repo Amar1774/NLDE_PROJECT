@@ -26,3 +26,46 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
+
+/* Print Styles for Exact College Micro-Project Report */
+@media print {
+  /* Hide all dashboard UI when printing */
+  header, aside, .no-print, button, nav {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .report-container {
+    gap: 0 !important;
+  }
+
+  .report-page {
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    padding: 22mm 18mm !important;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    border: 1.5pt solid black !important;
+    box-sizing: border-box !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}
